@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+}
+
+.portfolio {
+  background-color: #dbdbdb;
+  transition: background-color 0.3s ease;
+}
+
+.portfolio.dark {
+  background-color: #161616;
+}
+
+.dark h1,
+.dark .designation {
+  color: #dbdbdb;
+}
+
+.dark .description {
+  color: #858585;
+}
+
+/* Main Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Content Wrapper (Aligns Left & Right) */
+.home-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+/* Left Side: Text Content */
+.text-content {
+  flex: 1;
+  text-align: left;
+}
+
+h1 {
+  font-size: 46px;
+  font-weight: bold;
+}
+
+.designation {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #444;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+/* Button */
+.say-hello {
+  background-color: #5c40b3;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Right Side: Profile Image */
+.profile-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
+}

@@ -1,0 +1,83 @@
+.app-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #DBDBDB;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.app-bar.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: all 0.8s ease;
+}
+
+.nav-item:hover {
+    color: #5c40b3;
+}
+
+.dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.toggle-container {
+    width: 40px;
+    height: 20px;
+    background-color: #9f9f9f;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.toggle-container.dark {
+    background-color: #dbdbdb;
+}
+
+.dark .toggle-circle {
+    background-color: #333333;
+}
+
+.toggle-circle {
+    width: 20px;
+    height: 20px;
+    background-color: #dbdbdb;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.toggle-container.dark .toggle-circle {
+    transform: translateX(20px);
+}
+
+.dark .nav-item {
+    color: #dbdbdb;
+}
