@@ -1,5 +1,6 @@
 import './app-bar.css'
 import { useEffect, useState } from 'react';
+import profile from '../assets/profile.jpg'
 
 interface NavItem {
   text: string;
@@ -39,7 +40,7 @@ const AppBar: React.FC<AppBarProps> = ({
           {/* Left side */}
           <div className="nav-left">
             <img
-              src="/profile.jpg"
+              src={profile}
               alt="Profile"
               className="profile-image"
               onClick={() => setIsModalOpen(true)}
