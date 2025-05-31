@@ -1,5 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+  /* Default light theme variables */
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #f39c12;
+  --card-bg-color: #f8f9fa;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0,0,0,0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "arial", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'Poppins', sans-serif;
+  background: #1f1f38;
+  color: #fff;
+  line-height: 1.7;
+  background-image: url('./assets/bg-texture.png');
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme-aware components */
+button, input, textarea {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+/* Responsive base styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Responsive image */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Blur effect for navbar */
+.navbar-blur {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .navbar-blur {
+  background-color: rgba(30, 30, 30, 0.8);
 }

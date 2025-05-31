@@ -1,0 +1,108 @@
+.portfolio-section {
+  padding: var(--section-padding, 80px 20px);
+  max-width: 1200px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-out;
+}
+
+.portfolio-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  color: var(--heading-color, #333);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.dark .portfolio-header h2 {
+  color: var(--dark-heading-color, #f0f0f0);
+}
+
+.portfolio-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  background-color: var(--primary-color, #5c40b3);
+  border-radius: 2px;
+}
+
+.portfolio-header p {
+  font-size: 1.1rem;
+  color: var(--text-color-secondary, #666);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dark .portfolio-header p {
+  color: var(--dark-text-color-secondary, #b0b0b0);
+}
+
+/* Animation for portfolio header */
+.portfolio-header {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .portfolio-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .portfolio-header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 60px 15px;
+  }
+  
+  .portfolio-header h2 {
+    font-size: 2rem;
+  }
+  
+  .portfolio-header {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .portfolio-header p {
+    font-size: 0.95rem;
+  }
+}
