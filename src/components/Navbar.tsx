@@ -92,7 +92,7 @@ const AppBar: React.FC<AppBarProps> = ({
         >
           <div className="image-modal-content">
             <img
-              src="/profile.jpg"
+              src={profile}
               alt="Profile"
               onClick={(e) => e.stopPropagation()}
             />
