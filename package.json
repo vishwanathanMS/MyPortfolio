@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-   "homepage": "https://vishwanathanMS.github.io/MyPortfolio",
+  "homepage": "https://vishwanathanMS.github.io/MyPortfolio",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "emailjs-com": "^3.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },

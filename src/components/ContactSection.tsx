@@ -1,4 +1,5 @@
 import { useState, FormEvent } from 'react';
+import emailjs from 'emailjs-com';
 import './contact-section.css';
 
 const ContactSection = () => {
@@ -23,13 +24,24 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
-
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message
+    };
     try {
       // In a real application, you would send this data to your server
       // For this example, we'll simulate a successful submission
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      
-      console.log('Form data submitted:', formData);
+      // await new Promise((resolve) => setTimeout(resolve, 1500));
+      const result = await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY     // e.g., 3hP4KZqU_iqYzGi3a
+      );
+
+      console.log('Form data submitted:', result.text);
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -177,8 +189,8 @@ const ContactSection = () => {
               ></textarea>
             </div>
 
-            <button 
-              type="submit" 
+            <button
+              type="submit"
               className={`submit-button ${isSubmitting ? 'submitting' : ''}`}
               disabled={isSubmitting}
             >
@@ -194,7 +206,7 @@ const ContactSection = () => {
                 Message sent successfully! I'll get back to you soon.
               </div>
             )}
-            
+
             {submitStatus === 'error' && (
               <div className="submit-message error">
                 There was an error sending your message. Please try again.
