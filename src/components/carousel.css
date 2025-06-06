@@ -210,7 +210,6 @@
 .carousel-button:hover {
   background-color: var(--primary-color, #5c40b3);
   color: white;
-  transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(92, 64, 179, 0.4);
 }
 
@@ -224,14 +223,6 @@
 
 .carousel-button svg {
   transition: transform 0.3s ease;
-}
-
-.prev-button:hover svg {
-  transform: translateX(-3px);
-}
-
-.next-button:hover svg {
-  transform: translateX(3px);
 }
 
 @keyframes scaleIn {
